@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta content="Codescandy" name="author">
-<title>Quản lý - Tune Vibe</title>
+<title>Thêm sản phẩm - Tune Vibe</title>
 <!-- Favicon icon-->
 <link rel="shortcut icon" type="image/x-icon"
 	href="../assets/images/favicon/favicon.ico">
@@ -73,9 +73,9 @@
 						</a>
 
 						<form role="search">
-							<label for="search" class="form-label visually-hidden">Tìm kiếm</label>
-							<input class="form-control" type="search" placeholder="Tìm kiếm"
-								aria-label="Search" id="search" />
+							<label for="search" class="form-label visually-hidden">Tìm
+								kiếm</label> <input class="form-control" type="search"
+								placeholder="Tìm kiếm" aria-label="Search" id="search" />
 						</form>
 					</div>
 					<div>
@@ -209,8 +209,10 @@
 									</div>
 
 									<ul class="list-unstyled px-2 py-3">
-										<li><a class="dropdown-item" href="../index-customer.jsp">Trang chủ</a></li>
-										<li><a class="dropdown-item" href="admininfo.jsp">Thông tin cá nhân</a></li>
+										<li><a class="dropdown-item" href="../index-customer.jsp">Trang
+												chủ</a></li>
+										<li><a class="dropdown-item" href="admininfo.jsp">Thông
+												tin cá nhân</a></li>
 									</ul>
 									<div class="border-top px-5 py-3">
 										<a href="../signin.jsp">Đăng xuất</a>
@@ -221,7 +223,6 @@
 				</div>
 			</div>
 		</nav>
-
 
 		<div class="main-wrapper">
 			<!-- navbar vertical -->
@@ -236,15 +237,16 @@
 					</div>
 					<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
 						<ul class="navbar-nav flex-column" id="sideNavbar">
-							<li class="nav-item"><a class="nav-link  active "
+							<li class="nav-item"><a class="nav-link   "
 								href="index-admin.jsp">
 									<div class="d-flex align-items-center">
 										<span class="nav-link-icon"><i class="bi bi-house"></i></span>
 										<span class="nav-link-text">Quản lý</span>
 									</div>
 							</a></li>
-							<li class="nav-item mt-6 mb-3"><span class="nav-label">Quản lý cửa hàng</span></li>
-							<li class="nav-item"><a class="nav-link "
+							<li class="nav-item mt-6 mb-3"><span class="nav-label">Quản
+									lý cửa hàng</span></li>
+							<li class="nav-item"><a class="nav-link active"
 								href="../dashboard/products.jsp">
 									<div class="d-flex align-items-center">
 										<span class="nav-link-icon"><i class="bi bi-cart"></i></span>
@@ -272,11 +274,11 @@
 									<ul class="nav flex-column">
 										<li class="nav-item"><a class="nav-link "
 											href="../dashboard/orders.jsp">Các đơn hàng</a></li>
-											
+
 										<!-- Link chuyển hướng để xem chi tiết từng đơn hàng 
 										<li class="nav-item"><a class="nav-link "
 											href="../dashboard/order-single.html">Chi tiết đơn hàng</a></li> -->
-											
+
 									</ul>
 								</div></li>
 
@@ -353,7 +355,8 @@
 										<span>Quản lý</span>
 									</div>
 							</a></li>
-							<li class="nav-item mt-6 mb-3"><span class="nav-label">Quản lý cửa hàng</span></li>
+							<li class="nav-item mt-6 mb-3"><span class="nav-label">Quản
+									lý cửa hàng</span></li>
 							<li class="nav-item"><a class="nav-link "
 								href="../dashboard/products.html">
 									<div class="d-flex align-items-center">
@@ -381,12 +384,12 @@
 									data-bs-parent="#sideNavbar">
 									<ul class="nav flex-column">
 										<li class="nav-item"><a class="nav-link "
-											href="../dashboard/orders.jsp">Các đơn hàng</a></li>
-											
+											href="../dashboard/order-list.html">Các đơn hàng</a></li>
+
 										<!-- Link chuyển hướng để xem chi tiết từng đơn hàng 
 										<li class="nav-item"><a class="nav-link "
 											href="../dashboard/order-single.html">Chi tiết đơn hàng</a></li> -->
-											
+
 									</ul>
 								</div></li>
 							<li class="nav-item"><a class="nav-link "
@@ -415,388 +418,181 @@
 				</div>
 			</nav>
 
-			<!-- main wrapper -->
-			<main class="main-content-wrapper">
-				<section class="container">
-					<!-- row -->
-					<div class="row mb-8">
-						<div class="col-md-12">
-							<!-- card -->
-							<div class="card bg-light border-0 rounded-4"
-								style="background-image: url(../assets/images/slider/slider-image-1.jpg); background-repeat: no-repeat; background-size: cover; background-position: right">
-								<div class="card-body p-lg-12">
-									<h1>Chào mừng trở lại!</h1>
-									<p></p>
-									<a href="./products.jsp" class="btn btn-primary">Thêm sản phẩm</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- table -->
-					<div class="table-responsive-xl mb-6 mb-lg-0">
-						<div class="row flex-nowrap pb-3 pb-lg-0">
-							<div class="col-lg-4 col-12 mb-6">
-								<!-- card -->
-								<div class="card h-100 card-lg">
-									<!-- card body -->
-									<div class="card-body p-6">
-										<!-- heading -->
-										<div
-											class="d-flex justify-content-between align-items-center mb-6">
-											<div>
-												<h4 class="mb-0 fs-5">Tổng thu nhập</h4>
-											</div>
-											<div
-												class="icon-shape icon-md bg-light-danger text-dark-danger rounded-circle">
-												<i class="bi bi-currency-dollar fs-5"></i>
-											</div>
-										</div>
-										<!-- project number -->
-										<div class="lh-1">
-											<h1 class="mb-2 fw-bold fs-2">$93,438.78</h1>
-											<span>Doanh thu hàng tháng</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-12 mb-6">
-								<!-- card -->
-								<div class="card h-100 card-lg">
-									<!-- card body -->
-									<div class="card-body p-6">
-										<!-- heading -->
-										<div
-											class="d-flex justify-content-between align-items-center mb-6">
-											<div>
-												<h4 class="mb-0 fs-5">Đơn hàng</h4>
-											</div>
-											<div
-												class="icon-shape icon-md bg-light-warning text-dark-warning rounded-circle">
-												<i class="bi bi-cart fs-5"></i>
-											</div>
-										</div>
-										<!-- project number -->
-										<div class="lh-1">
-											<h1 class="mb-2 fw-bold fs-2">42,339</h1>
-											<span> <span class="text-dark me-1">35+</span> Đơn hàng mới
-										
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-12 mb-6">
-								<!-- card -->
-								<div class="card h-100 card-lg">
-									<!-- card body -->
-									<div class="card-body p-6">
-										<!-- heading -->
-										<div
-											class="d-flex justify-content-between align-items-center mb-6">
-											<div>
-												<h4 class="mb-0 fs-5">Khách hàng</h4>
-											</div>
-											<div
-												class="icon-shape icon-md bg-light-info text-dark-info rounded-circle">
-												<i class="bi bi-people fs-5"></i>
-											</div>
-										</div>
-										<!-- project number -->
-										<div class="lh-1">
-											<h1 class="mb-2 fw-bold fs-2">39,354</h1>
-											<span> <span class="text-dark me-1">30+</span> Khách hàng mới
-												
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+         <!-- main -->
+         <main class="main-content-wrapper">
+            <!-- container -->
+            <div class="container">
+               <!-- row -->
+               <div class="row mb-8">
+                  <div class="col-md-12">
+                     <div class="d-md-flex justify-content-between align-items-center">
+                        <!-- page header -->
+                        <div>
+                           <h2>Thêm sản phẩm mới</h2>
+                           <!-- breacrumb -->
+                           <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb mb-0">
+                                 <li class="breadcrumb-item"><a href="index-admin.jsp" class="text-inherit">Quản lý</a></li>
+                                 <li class="breadcrumb-item"><a href="products.jsp" class="text-inherit">Sản phẩm</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">Thêm sản phẩm mới</li>
+                              </ol>
+                           </nav>
+                        </div>
+                        <!-- button -->
+                        <div>
+                           <a href="products.jsp" class="btn btn-light">Quay lại</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- row -->
+               <div class="row">
+                  <div class="col-lg-8 col-12">
+                     <!-- card -->
+                     <div class="card mb-6 card-lg">
+                        <!-- card body -->
+                        <div class="card-body p-6">
+                           <h4 class="mb-4 h5">Thông tin sản phẩm</h4>
+                           <div class="row">
+                              <!-- input -->
+                              <div class="mb-3 col-lg-6">
+                                 <label class="form-label">Tên sản phẩm</label>
+                                 <input type="text" class="form-control" placeholder="Tên" required />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-lg-6">
+                                 <label class="form-label">Danh mục sản phẩm</label>
+                                 <select class="form-select">
+                                    <option selected>Danh mục</option>
+                                    <option value="Thực phẩm tươi sống">Thực phẩm tươi sống</option>
+                                    <option value="Thực phẩm chế biến sẵn">Thực phẩm chế biến sẵn</option>
+                                    <option value="Đồ uống">Đồ uống</option>
+                                    <option value="Đồ uống có cồn">Đồ uống có cồn</option>
+                                    <option value="Đồ ăn nhẹ và đồ ngọt">Đồ ăn nhẹ và đồ ngọt</option>
+                                    <option value="Hóa mỹ phẩm">Hóa mỹ phẩm</option>
+                                    <option value="Đồ dùng gia đình">Đồ dùng gia đình</option>
+                                    <option value="Văn phòng phẩm">Văn phòng phẩm</option>
+                                 </select>
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-lg-6">
+                                 <label class="form-label">Số lượng sản phẩm</label>
+                                 <input type="text" class="form-control" placeholder="Số lượng" required />
+                              </div>
+                              <!-- input
+                              <div class="mb-3 col-lg-6">
+                                 <label class="form-label">Units</label>
+                                 <select class="form-select">
+                                    <option selected>Select Units</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                 </select>
+                              </div>   -->
+                               <div>
+                                 <div class="mb-3 col-lg-12 mt-5">
+                                    <!-- heading -->
+                                    <h4 class="mb-3 h5">Ảnh</h4>
 
-					<!-- row -->
-					<div class="row">
-						<div class="col-xl-8 col-lg-6 col-md-12 col-12 mb-6">
-							<!-- card -->
-							<div class="card h-100 card-lg">
-								<div class="card-body p-6">
-									<!-- heading -->
-									<div class="d-flex justify-content-between">
-										<div>
-											<h3 class="mb-1 fs-5">Revenue</h3>
-											<small>(+63%) than last year)</small>
-										</div>
-										<div>
-											<!-- select option -->
-											<select class="form-select">
-												<option selected>2019</option>
-												<option value="2023">2020</option>
-												<option value="2024">2021</option>
-												<option value="2025">2022</option>
-												<option value="2025">2023</option>
-											</select>
-										</div>
-									</div>
-									<!-- chart -->
-									<div id="revenueChart" class="mt-6"></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-4 col-lg-6 col-12 mb-6">
-							<!-- card -->
-							<div class="card h-100 card-lg">
-								<!-- card body -->
-								<div class="card-body p-6">
-									<!-- heading -->
-									<h3 class="mb-0 fs-5">Total Sales</h3>
-									<div id="totalSale" class="mt-6 d-flex justify-content-center"></div>
-									<div class="mt-4">
-										<!-- list -->
-										<ul class="list-unstyled mb-0">
-											<li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg"
-													width="8" height="8" fill="currentColor"
-													class="bi bi-circle-fill text-primary" viewBox="0 0 16 16">
-                                          <circle cx="8" cy="8" r="8" />
-                                       </svg> <span class="ms-1"> <span
-													class="text-dark">Shippings $32.98</span> (2%)
-											</span></li>
-											<li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg"
-													width="8" height="8" fill="currentColor"
-													class="bi bi-circle-fill text-warning" viewBox="0 0 16 16">
-                                          <circle cx="8" cy="8" r="8" />
-                                       </svg> <span class="ms-1"> <span
-													class="text-dark">Refunds $11</span> (11%)
-											</span></li>
-											<li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg"
-													width="8" height="8" fill="currentColor"
-													class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
-                                          <circle cx="8" cy="8" r="8" />
-                                       </svg> <span class="ms-1"> <span
-													class="text-dark">Order $14.87</span> (1%)
-											</span></li>
-											<li><svg xmlns="http://www.w3.org/2000/svg" width="8"
-													height="8" fill="currentColor"
-													class="bi bi-circle-fill text-info" viewBox="0 0 16 16">
-                                          <circle cx="8" cy="8" r="8" />
-                                       </svg> <span class="ms-1"> <span
-													class="text-dark">Income 3,271</span> (86%)
-											</span></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- row -->
-					<div class="row">
-						<div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-6">
-							<!-- card -->
-							<div class="card h-100 card-lg">
-								<!-- card body -->
-								<div class="card-body p-6">
-									<h3 class="mb-0 fs-5">Sales Overview</h3>
-									<div class="mt-6">
-										<!-- text -->
-										<div class="mb-5">
-											<div
-												class="d-flex align-items-center justify-content-between">
-												<h5 class="fs-6">Total Profit</h5>
-												<span> <span class="me-1 text-dark">$1,619</span>
-													(8.6%)
-												</span>
-											</div>
-											<!-- main wrapper -->
-											<div>
-												<!-- progressbar -->
-												<div class="progress bg-light-primary" style="height: 6px">
-													<div class="progress-bar bg-primary" role="progressbar"
-														aria-label="Example 1px high" style="width: 25%"
-														aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-										</div>
-										<div class="mb-5">
-											<!-- text -->
-											<div
-												class="d-flex align-items-center justify-content-between">
-												<h5 class="fs-6">Total Income</h5>
-												<span> <span class="me-1 text-dark">$3,571</span>
-													(86.4%)
-												</span>
-											</div>
-											<div>
-												<!-- progressbar -->
-												<div class="progress bg-info-soft" style="height: 6px">
-													<div class="progress-bar bg-info" role="progressbar"
-														aria-label="Example 1px high" style="width: 88%"
-														aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-										</div>
-										<div>
-											<!-- text -->
-											<div
-												class="d-flex align-items-center justify-content-between">
-												<h5 class="fs-6">Total Expenses</h5>
-												<span> <span class="me-1 text-dark">$3,430</span>
-													(74.5%)
-												</span>
-											</div>
-											<div>
-												<!-- progressbar -->
-												<div class="progress bg-light-danger" style="height: 6px">
-													<div class="progress-bar bg-danger" role="progressbar"
-														aria-label="Example 1px high" style="width: 45%"
-														aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-6">
-							<div class="position-relative h-100">
-								<!-- card -->
-								<div class="card card-lg mb-6">
-									<!-- card body -->
-									<div class="card-body px-6 py-8">
-										<div class="d-flex align-items-center">
-											<div>
-												<!-- svg -->
-												<svg xmlns="http://www.w3.org/2000/svg" width="32"
-													height="32" fill="currentColor"
-													class="bi bi-bell text-warning" viewBox="0 0 16 16">
-                                          <path
-														d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
-                                       </svg>
-											</div>
-											<!-- text -->
-											<div class="ms-4">
-												<h5 class="mb-1">Start your day with New Notification.</h5>
-												<p class="mb-0">
-													You have <a class="link-info" href="#!">2 new
-														notification</a>
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- card -->
-								<div class="card card-lg">
-									<!-- card body -->
-									<div class="card-body px-6 py-8">
-										<div class="d-flex align-items-center">
-											<!-- svg -->
-											<div>
-												<svg xmlns="http://www.w3.org/2000/svg" width="32"
-													height="32" fill="currentColor"
-													class="bi bi-lightbulb text-success" viewBox="0 0 16 16">
-                                          <path
-														d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
-                                       </svg>
-											</div>
-											<!-- text -->
-											<div class="ms-4">
-												<h5 class="mb-1">Monitor your Sales and Profitability</h5>
-												<p class="mb-0">
-													<a class="link-info" href="#!">View Performance</a>
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- row -->
-					<div class="row">
-						<div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-6">
-							<div class="card h-100 card-lg">
-								<!-- heading -->
-								<div class="p-6">
-									<h3 class="mb-0 fs-5">Các đơn hàng</h3>
-								</div>
-								<div class="card-body p-0">
-									<!-- table -->
-									<div class="table-responsive">
-										<table
-											class="table table-centered table-borderless text-nowrap table-hover">
-											<thead class="bg-light">
-												<tr>
-													<th scope="col">Mã đơn</th>
-													<th scope="col">Tên sản phẩm</th>
-													<th scope="col">Hạn sử dụng</th>
-													<th scope="col">Giá tiền</th>
-													<th scope="col">Trạng thái</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>#FC0005</td>
-													<td>Haldiram's Sev Bhujia</td>
-													<td>28 March 2023</td>
-													<td>$18.00</td>
-													<td><span
-														class="badge bg-light-primary text-dark-primary">Shipped</span>
-													</td>
-												</tr>
-												<tr>
-													<td>#FC0004</td>
-													<td>NutriChoice Digestive</td>
-													<td>24 March 2023</td>
-													<td>$24.00</td>
-													<td><span
-														class="badge bg-light-warning text-dark-warning">Pending</span>
-													</td>
-												</tr>
-												<tr>
-													<td>#FC0003</td>
-													<td>Onion Flavour Potato</td>
-													<td>8 Feb 2023</td>
-													<td>$9.00</td>
-													<td><span
-														class="badge bg-light-danger text-dark-danger">Cancel</span>
-													</td>
-												</tr>
-												<tr>
-													<td>#FC0002</td>
-													<td>Blueberry Greek Yogurt</td>
-													<td>20 Jan 2023</td>
-													<td>$12.00</td>
-													<td><span
-														class="badge bg-light-warning text-dark-warning">Pending</span>
-													</td>
-												</tr>
-												<tr>
-													<td>#FC0001</td>
-													<td>Slurrp Millet Chocolate</td>
-													<td>14 Jan 2023</td>
-													<td>$8.00</td>
-													<td><span class="badge bg-light-info text-dark-info">Processing</span>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-		</div>
-	</div>
+                                    <!-- input -->
+                                    <div id="my-dropzone" class="dropzone mt-4 border-dashed rounded-2 min-h-0"></div>
+                                 </div>
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3 col-lg-12 mt-5">
+                                 <h4 class="mb-3 h5">Mô tả sản phẩm</h4>
+                                 <div class="py-8" id="editor"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                     <!-- card -->
+                     <div class="card mb-6 card-lg">
+                        <!-- card body -->
+                        <div class="card-body p-6">
+                           <!-- input -->
+                           <div class="form-check form-switch mb-4">
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchStock" checked />
+                              <label class="form-check-label" for="flexSwitchStock">Có sẵn</label>
+                           </div>
+                           <!-- input -->
+                           <div>
+                              <div class="mb-3">
+                                 <label class="form-label">Mã sản phẩm</label>
+                                 <input type="text" class="form-control" placeholder="Nhập mã" />
+                              </div>
+                              <!-- input -->
+                              <div class="mb-3">
+                                 <label class="form-label" id="productSKU">Trạng thái</label>
+                                 <br />
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked />
+                                    <label class="form-check-label" for="inlineRadio1">Còn hàng</label>
+                                 </div>
+                                 <!-- input -->
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label" for="inlineRadio2">Hết hàng</label>
+                                 </div>
+                                 <!-- input -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- card -->
+                     <div class="card mb-6 card-lg">
+                        <!-- card body -->
+                        <div class="card-body p-6">
+                           <h4 class="mb-4 h5">Giá bán</h4>
+                           <!-- input -->
+                           <div class="mb-3">
+                              <label class="form-label">Giá gốc</label>
+                              <input type="text" class="form-control" placeholder="$0.00" />
+                           </div>
+                           <!-- input -->
+                           <div class="mb-3">
+                              <label class="form-label">Giá khuyến mãi</label>
+                              <input type="text" class="form-control" placeholder="$0.00" />
+                           </div>
+                        </div>
+                     </div>
+                     <!-- card 
+                     <div class="card mb-6 card-lg">
+                        <div class="card-body p-6">
+                           <h4 class="mb-4 h5">Meta Data</h4>
+                           <div class="mb-3">
+                              <label class="form-label">Meta Title</label>
+                              <input type="text" class="form-control" placeholder="Title" />
+                           </div>
+                           <div class="mb-3">
+                              <label class="form-label">Meta Description</label>
+                              <textarea class="form-control" rows="3" placeholder="Meta Description"></textarea>
+                           </div>
+                        </div>
+                     </div>  -->
+                     <!-- button -->
+                     <div class="d-grid">
+                        <a href="#" class="btn btn-primary">Thêm sản phẩm</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
 
-	<!-- Libs JS -->
-	<!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
-	<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+      <!-- Libs JS -->
+<!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
 
-	<!-- Theme JS -->
-	<script src="../assets/js/theme.min.js"></script>
+<!-- Theme JS -->
+<script src="../assets/js/theme.min.js"></script>
 
-	<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-	<script src="../assets/js/vendors/chart.js"></script>
-</body>
+      <script src="../assets/libs/quill/dist/quill.min.js"></script>
+      <script src="../assets/js/vendors/editor.js"></script>
+      <script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+      <script src="../assets/js/vendors/dropzone.js"></script>
+   </body>
 </html>

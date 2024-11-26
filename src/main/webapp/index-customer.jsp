@@ -67,11 +67,11 @@
 
 					<!-- LOGO -->
 					<div class="col-xxl-2 col-lg-3 col-md-6 col-5">
-						<a class="navbar-brand d-none d-lg-block" href="./index.html">
+						<a class="navbar-brand d-none d-lg-block" href="./index-customer.jsp">
 							<img src="./assets/images/logo/convenience-store-svgrepo-com.svg" />
 						</a>
 						<div class="d-flex justify-content-between w-100 d-lg-none">
-							<a class="navbar-brand" href="./index.html"> <img
+							<a class="navbar-brand" href="./index-customer.jsp"> <img
 								src="./assets/images/logo/convenience-store-svgrepo-com.svg" />
 							</a>
 						</div>
@@ -168,7 +168,7 @@
 				<div class="offcanvas offcanvas-start" tabindex="-1"
 					id="navbar-default" aria-labelledby="navbar-defaultLabel">
 					<div class="offcanvas-header pb-1">
-						<a href="./index.html"><img
+						<a href="./index-customer.jsp"><img
 							src="./assets/images/logo/freshcart-logo.svg"
 							alt="eCommerce HTML Template" /></a>
 						<button type="button" class="btn-close"
@@ -291,7 +291,7 @@
 					</form>
 				</div>
 				<div class="modal-footer border-0 justify-content-center">
-					Bạn đã có tài khoản? <a href="./pages/signin.html">Đăng nhập</a>
+					Bạn đã có tài khoản? <a href="signin.jsp">Đăng nhập</a>
 					<!-- <a href="#">Sign in</a> -->
 				</div>
 			</div>
@@ -320,7 +320,7 @@
 				<!-- btn -->
 				<div class="d-flex justify-content-between mt-4">
 					<!-- Sửa nút Thanh toán -->
-					<a href="userorder.html" class="btn btn-primary">Thanh toán</a>
+					<a href="userorder.jsp" class="btn btn-primary">Thanh toán</a>
 
 					<!-- Nút Xóa giỏ hàng -->
 					<div class="btn btn-dark" onclick="deleteAllCart()">Xóa giỏ
