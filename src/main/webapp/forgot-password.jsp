@@ -89,7 +89,7 @@
                               <!-- btn -->
                               <div class="col-12 d-grid gap-2">
                                  <button type="submit" class="btn btn-primary">Lấy lại Mật khẩu</button>
-                                 <a href="signup.html" class="btn btn-light">Quay về trang Đăng ký</a>
+                                 <a href="signup.jsp" class="btn btn-light">Quay về trang Đăng ký</a>
                               </div>
                            </div>
                         </form>
@@ -182,3 +182,4 @@
       <script src="../assets/js/vendors/validation.js"></script>
    </body>
 </html>
+

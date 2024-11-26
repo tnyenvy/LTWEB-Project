@@ -49,7 +49,7 @@
       <div class="border-bottom shadow-sm">
          <nav class="navbar navbar-light py-2">
             <div class="container justify-content-center justify-content-lg-between">
-               <a class="navbar-brand" href="./index.html">
+               <a class="navbar-brand" href="index-customer.jsp">
                   <img src="./assets/images/logo/convenience-store-svgrepo-com.svg" alt="" class="d-inline-block align-text-top" />
                </a>
                <div class="modal-footer border-0 justify-content-center">
@@ -116,7 +116,7 @@
                            <!-- link -->
                            <div>
                               Bạn chưa có tài khoản Tune Vibe?
-                              <a href="./signup.html">Đăng ký</a> thành viên
+                              <a href="./signup.jsp">Đăng ký</a> thành viên
                            </div>
                         </div>
                      </form>
