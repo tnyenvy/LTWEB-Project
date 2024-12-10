@@ -1,0 +1,18 @@
+@charset "UTF-8";/* styles.css */
+.dropdown-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 100%;
+    display: none; /* Ẩn mặc định */
+}
+
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Hiệu ứng hover */
+}

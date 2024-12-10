@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${product.isEdit} ? 'Edit Product' : 'Add Product'"></title>
+</head>
+<body>
+    <h2 th:text="${product.isEdit} ? 'Edit Product' : 'Add Product'"></h2>
+
+    <form action="/admin/products/save" method="post" enctype="multipart/form-data">
+        <input type="hidden" th:value="${product.isEdit}" name="isEdit">
+        <input type="hidden" th:value="${product.id}" name="id">
+        
+        <label>Product Name</label><br> 
+        <input type="text" name="name" th:value="${product.name}"><br>
+        
+        <label>Choose Images:</label><br>
+        <input type="file" name="imageFile"><br>
+        
+        <label>Images</label><br>
+        <input type="text" name="images" th:value="${product.images}"><br>
+        
+        <label>Quantity</label><br>
+        <input type="text" name="quantity" th:value="${product.quantity}"><br>
+        
+        <label>Note</label><br>
+        <input type="text" name="note" th:value="${product.note}"><br>
+        
+        <label>Type</label><br>
+        <input type="text" name="type" th:value="${product.type}"><br>
+        
+        <label>Price</label><br>
+        <input type="text" name="price" th:value="${product.price}"><br>
+        
+        <label>Tag</label><br>
+        <input type="text" name="tag" th:value="${product.tag}"><br>
+        
+        <label>Hide</label><br>
+        <input type="text" name="hide" th:value="${product.hide}"><br>
+        
+        <div th:if="${product.isEdit}">
+            <input type="submit" value="Update">
+        </div>
+        
+        <div th:if="${!product.isEdit}">
+            <input type="submit" value="Insert">
+        </div>
+    </form>
+</body>
+</html>

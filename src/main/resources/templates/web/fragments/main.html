@@ -1,0 +1,306 @@
+<main th:fragment="main">
+	<h1>MAIN</h1>
+	<section class="mt-8">
+		<div class="container">
+			<div class="hero-slider">
+				<div
+					style="background: url(./assets/images/banner/grocery-banner-2.jpg) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+					<div
+						class="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-14 px-8 text-xs-center">
+						<h2 class="text-dark display-5 fw-bold mt-4">Chào mừng đến
+							với Tune Vibe</h2>
+						<p class="lead">Mua sắm thực phẩm trực tuyến và giao hàng tận
+							nhà thuận tiện.</p>
+						<div th:href="@{#!}" class="btn btn-dark mt-3"
+							onclick="scrollCategory('category')">
+							Mua sắm ngay <i class="feather-icon icon-arrow-right ms-1"></i>
+						</div>
+					</div>
+				</div>
+				<div
+					style="background: url(./assets/images/banner/grocery-banner.png) no-repeat; background-size: cover; border-radius: 0.5rem; background-position: center">
+					<div
+						class="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-14 px-8 text-xs-center">
+						<span class="badge text-bg-warning">Mua hàng tiện lơi</span>
+						<h2 class="text-dark display-5 fw-bold mt-4">
+							Giao hàng miễn phí <br /> với hóa đơn trên <span
+								class="text-primary">100k</span>
+						</h2>
+						<p class="lead">Chúng tôi hân hạnh phục vụ bạn</p>
+						<div class="btn btn-dark mt-3"
+							onclick="scrollCategory('category')">
+							Mua sắm ngay <i class="feather-icon icon-arrow-right ms-1"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Category Section Start-->
+	<section class="mb-lg-10 mt-lg-14 my-8" id="category">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 mb-6">
+					<h3 class="mb-0">Danh mục sản phẩm</h3>
+				</div>
+			</div>
+			<div class="category-slider">
+				<div class="item" onclick="scrollCategory('raw-food')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-raw-food.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Thực phẩm tươi sống</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('processed-food')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img
+									th:src="@{assets/images/category/category-processed-food.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Thực phẩm chế biến sẵn</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('drink')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-drink.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Đồ uống</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('alcohol')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-alcohol.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Đồ uống có cồn</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('snack')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-snack.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Đồ ăn nhẹ và đồ ngọt</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('cosmetics')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-cosmetics.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Hóa mỹ phẩm</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('home-item')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-home-item.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Đồ dùng gia đình</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item" onclick="scrollCategory('stationery')">
+					<div class="text-decoration-none text-inherit">
+						<div class="card card-product mb-lg-4">
+							<div class="card-body text-center py-8">
+								<img th:src="@{assets/images/category/category-stationery.png}"
+									alt="Grocery Ecommerce Template" class="mb-3 img-fluid" />
+								<div class="text-truncate">Văn phòng phẩm</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Category Section End-->
+
+	<!-- Thực phẩm tươi sống Start-->
+	<div id="raw-food">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container0">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Thực phẩm tươi sống</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer0"></div>
+
+			</div>
+		</section>
+	</div>
+	<!-- Thực phẩm chế biến sẵn-->
+	<div id="processed-food">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container1">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Thực phẩm chế biến sẵn</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer1"></div>
+
+			</div>
+		</section>
+	</div>
+	<!-- Đồ uống -->
+	<div id="drink">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container2">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Đồ uống</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer2"></div>
+			</div>
+		</section>
+	</div>
+	<!-- Đồ uống có cồn -->
+	<div id="alcohol">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container3">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Đồ uống có cồn</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer3"></div>
+			</div>
+		</section>
+	</div>
+	<!-- Đồ ăn nhẹ và đồ ngọt -->
+	<div id="snack">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container4">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Đồ ăn nhẹ và đồ ngọt</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer4"></div>
+			</div>
+		</section>
+	</div>
+	<!-- Hóa mỹ phẩm -->
+	<div id="cosmetics">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container5">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Hóa mỹ phẩm</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer5"></div>
+			</div>
+		</section>
+	</div>
+	<!-- Đồ dùng gia đình -->
+	<div id="home-item">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container6">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Đồ dùng gia đình</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer6"></div>
+			</div>
+		</section>
+	</div>
+	<!-- Văn phòng phẩm -->
+	<div id="stationery">
+		<section class="my-lg-14 my-8">
+			<div class="container" id="Container7">
+				<div class="row">
+					<div class="col-12 mb-6">
+						<h3 class="mb-0">Văn phòng phẩm</h3>
+					</div>
+				</div>
+				<div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3"
+					id="productContainer7"></div>
+			</div>
+		</section>
+	</div>
+	<section class="my-lg-14 my-8">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
+					<div class="mb-8 mb-xl-0">
+						<div class="mb-6">
+							<img th:src="@{assets/images/icons/clock.svg}" alt="" />
+						</div>
+						<h3 class="h5 mb-3">Giao hàng tiết kiệm trong 15 phút</h3>
+						<p>Nhận hàng nhanh chóng tại nhà từ các cửa hàng Tune Vibe gần
+							bạn.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="mb-8 mb-xl-0">
+						<div class="mb-6">
+							<img th:src="@{assets/images/icons/gift.svg}" alt="" />
+						</div>
+						<h3 class="h5 mb-3">Giá tốt cùng nhiều Ưu đãi hấp dẫn</h3>
+						<p>Mua sắm tiết kiệm cùng các ưu đãi hoàn tiền hấp dẫn với
+							Tune Vibe</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="mb-8 mb-xl-0">
+						<div class="mb-6">
+							<img th:src="@{assets/images/icons/package.svg}" alt="" />
+						</div>
+						<h3 class="h5 mb-3">Đa dạng, phong phú</h3>
+						<p>Mua sắm thả ga với đa dạng sản phẩm bao gồm thực phẩm, chăm
+							sóc cá nhân, gia đình, bánh ngọt và hơn thế nữa.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="mb-8 mb-xl-0">
+						<div class="mb-6">
+							<img th:src="@{assets/images/icons/refresh-cw.svg}" alt="" />
+						</div>
+						<h3 class="h5 mb-3">Đổi trả nhanh chóng</h3>
+						<p>
+							Không hài lòng với sản phẩm? Hoàn trả hàng ngay tại nhà và nhận
+							hoàn tiền trong vài giờ. Nhấn để xem <a th:href="@{#!}">Điều khoản
+								Sử dụng</a> .
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
