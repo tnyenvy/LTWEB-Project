@@ -9,13 +9,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
-		return "web/dashboard/interface";
+		return "index-customer";
 	}
-	
-	@RequestMapping(value = "/test_product", method = RequestMethod.GET)
-	public String indextt() {
-		return "admin/product/interface";
-	}
-	
 	
 }
