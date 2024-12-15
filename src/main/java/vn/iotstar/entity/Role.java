@@ -1,25 +1,62 @@
 package vn.iotstar.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
-import java.io.Serializable;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
 @Entity
-@Table(name = "roles")
-public class Role implements Serializable {
-    
-	private static final long serialVersionUID = 1L;
+@Table(name = "tbl_roles")
+public class Role extends BaseEntity implements GrantedAuthority{
+	@Column(name = "name", length = 100, nullable = false)
+	private String name;
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "roleid")
-    private Long id;
+	@Column(name = "description", length = 45, nullable = false)
+	private String description;
 
-    @Column(name = "rolename", columnDefinition = "NVARCHAR(50) NOT NULL")
-    private String name;
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinTable(name = "tbl_users_roles", joinColumns = @JoinColumn(name = "role_id")
+			, inverseJoinColumns = @JoinColumn(name = "user_id"))
+	private Set<User> users = new HashSet<User>();
 
+	public void addUsers(User user) {
+		user.getRoles().add(this);
+		users.add(user);
+	}
+
+	public void deleteUsers(User user) {
+		user.getRoles().remove(this);
+		users.remove(user);
+	}
+
+	@Override
+	public String getAuthority() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Set<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
 }
