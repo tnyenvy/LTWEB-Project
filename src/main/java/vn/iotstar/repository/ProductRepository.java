@@ -1,18 +1,23 @@
 package vn.iotstar.repository;
 
-import java.util.Optional;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.JpaRepository;
-
+import vn.iotstar.dto.ProductSearchDataModel;
 import vn.iotstar.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
-	
-	Optional<Product> findByName(String name);
-	
-	// Find and paginate search results
-	Page<Product> findByNameContaining(String name, Pageable pageable);
-	
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Integer>{
+
+    @PersistenceContext
+    EntityManager entityManager = null;
+
+    @PersistenceContext
+    default Class<ProductSearchDataModel> clazz() {
+        // TODO Auto-generated method stub
+        return ProductSearchDataModel.class;
+    }
+
 }
