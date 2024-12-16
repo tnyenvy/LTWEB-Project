@@ -26,7 +26,7 @@
 
     <%--open content --%>
     <div class="content">
-        <img src="${base }/img/bannertsun.png" width="100%">
+        <img src="${base }/img/slider2.png" width="100%">
         <!--open new item-->
 
         <div class="products">
@@ -76,16 +76,16 @@
                 </div>
                 <div class="logo-item-list">
                     <a href="${base }/collection"> <img
-                            src="${base }/img/collection.png" width="100%">
+                            src="${base }/img/collection.jpg" width="100%">
                     </a>
-                    <h3 class="logo-name-collection">Tất cả sản phẩm</h3>
-                    <div class="add-collection">
+                    <h3 class="logo-name">Tất cả sản phẩm</h3>
+                    <div class="add">
                         <a href="${base }/collection">XEM THÊM</a>
                     </div>
                 </div>
                 <div class="logo-item-list">
                     <a href="${base }/collection"> <img
-                            src="${base }/img/drink.png" width="100%">
+                            src="${base }/img/category-drink.png" width="100%">
                     </a>
                     <h3 class="logo-name">Đồ uống</h3>
                     <div class="add">
@@ -100,12 +100,8 @@
         <div class="about">
             <div class="about-us">
                 <a href="${base }/introduction"> <img
-                        src="${base }/img/aboutus.png" width="80%">
+                        src="${base }/img/QRCode.png" width="80%">
                 </a>
-                <h3 class="about-title">ABOUT US</h3>
-                <div class="about-button">
-                    <a href="${base }/introduction"> XEM NGAY </a>
-                </div>
             </div>
             <div class="about-us">
 

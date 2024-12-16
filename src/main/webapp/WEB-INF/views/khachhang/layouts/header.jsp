@@ -12,10 +12,9 @@
 <div class="main-header">
 
     <div class="header">
-        <!-- CHÈN LOGO VÀO ĐÂY
         <div class="title">
-            <a href="${base }/home"> <img src="${base }/img/logo.png">
-            </a> -->
+            <a href="${base }/home"> <img src="${base }/img/logo.svg">
+            </a>
         </div>
         <div class="search">
             <input type="text" class="searchTerm"
