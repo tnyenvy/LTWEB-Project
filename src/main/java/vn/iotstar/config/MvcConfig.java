@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.JstlView;
  * @author daing
  */
 @Configuration
-public class MvcConf implements WebMvcConfigurer {
+public class MvcConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addResourceHandlers(final ResourceHandlerRegistry registry) {

@@ -1,6 +1,5 @@
 package vn.iotstar.config;
 
-import vn.iotstar.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,10 +9,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import vn.iotstar.service.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
-public class SecureConf extends WebSecurityConfigurerAdapter {
+public class SecureConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired 
 	private UserDetailsServiceImpl userDetailsService;
