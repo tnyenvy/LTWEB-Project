@@ -41,8 +41,7 @@
 
                         <div class="item-images">
                             <a href="${base }/product/details/${product.seo}"> <img
-                                    src="${base }/upload/${product.avatar}"
-                                    width="100%">
+                                src="${base }/upload/${product.avatar}" style="width: 1100; height: 800; max-width: 100%; max-height: 100%;">
                             </a>
                         </div>
                         <div class="item-content">
