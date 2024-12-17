@@ -34,19 +34,56 @@ public class HomeController extends BaseController {
 		this.subcribeService = subcribeService;
 	}
 
-
 	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
 	public String home(final Model model, final HttpServletRequest request, final HttpServletResponse response)
 			throws IOException {
 
 		Subcribe subcribe = new Subcribe();
 		model.addAttribute("subcribe", subcribe);
-		
+
 		ProductSearchModel searchModel = new ProductSearchModel();
+
+		// Lấy thông tin phân trang từ request
+		int currentPage = 1; // Trang hiện tại mặc định là 1
+		int limit = 4; // Số sản phẩm mỗi trang (4 sản phẩm mỗi trang, mặc định)
+
+		if (request.getParameter("page") != null) {
+			currentPage = Integer.parseInt(request.getParameter("page"));
+		}
+
+		// Đặt số sản phẩm mỗi trang
+		searchModel.setSize(limit);
+		searchModel.setPage(currentPage);
 		searchModel.keyword = request.getParameter("keyword");
-		
-		model.addAttribute("productsWithPaging", productService.search(searchModel));
-		model.addAttribute("searchModel", searchModel);
+
+		// Lấy danh sách sản phẩm và phân trang
+		PagerData<Product> productsWithPaging = productService.search(searchModel);
+
+		// Lấy tổng số sản phẩm và tính tổng số trang
+		int totalItems = productsWithPaging.getTotalItems();
+		int totalPages = (int) Math.ceil((double) totalItems / limit); // Cập nhật số trang
+
+		// Giới hạn số trang hiển thị tối đa là 3
+		int maxPagesToShow = 3;
+		int startPage = Math.max(currentPage - 1, 1);
+		int endPage = Math.min(currentPage + 1, totalPages);
+
+		if (totalPages > maxPagesToShow) {
+			if (currentPage == 1) {
+				endPage = Math.min(maxPagesToShow, totalPages);
+			} else if (currentPage == totalPages) {
+				startPage = Math.max(totalPages - maxPagesToShow + 1, 1);
+			}
+		}
+
+		// Truyền dữ liệu sang view
+		model.addAttribute("productsWithPaging", productsWithPaging);
+		model.addAttribute("currentPage", currentPage);
+		model.addAttribute("pageSize", limit); // Truyền thêm thông tin size vào model
+		model.addAttribute("totalPages", totalPages);
+		model.addAttribute("startPage", startPage);
+		model.addAttribute("endPage", endPage);
+
 		return "khachhang/index";
 	}
 

@@ -17,7 +17,7 @@ import java.util.List;
 
 public abstract class BaseService<E extends BaseEntity>{
 
-	private static int SIZE_OF_PAGE = 20;
+	private static int SIZE_OF_PAGE = 4;
 
 	@Autowired
 	protected CheckEmailRepository checkEmailRepository;
@@ -103,22 +103,22 @@ public abstract class BaseService<E extends BaseEntity>{
 
 	public PagerData<E> executeByNativeSQL(String sql, int page) {
 		PagerData<E> result = new PagerData<E>();
-		
+
 		try {
 			Query query = entityManager.createNativeQuery(sql, clazz());
 			if(page > 0) {
 				result.setCurrentPage(page);
 				result.setTotalItems(query.getResultList().size());
-				
+
 				query.setFirstResult((page - 1) * SIZE_OF_PAGE);
 				query.setMaxResults(SIZE_OF_PAGE);
 			}
-			
+
 			result.setData(query.getResultList());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return result;
 	}
 

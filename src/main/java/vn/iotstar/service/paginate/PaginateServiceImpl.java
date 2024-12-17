@@ -10,9 +10,9 @@ public class PaginateServiceImpl {
 	PagerData paginate = new PagerData();
 	paginate.setCurrentPage(CheckCurrentPage(currentPage, paginate.getCurrentPage()));
 	paginate.setLimit(limit);
-		
+
 	paginate.setTotalItems(SetInfoTotalItems(totalData, limit));
-	
+
 	int start = FindStart(paginate.getCurrentPage(), limit);
 	paginate.setStart(start);
 	int end = FindEnd(paginate.getStart(), limit, totalData);
@@ -36,7 +36,7 @@ public class PaginateServiceImpl {
 		totalItems = totalItems * limit < totalData ? totalItems + 1 : totalItems;
 		return totalItems;
 	}
-	
+
 	public int CheckCurrentPage(int currentPage, int totalItems) {
 		if (currentPage < 1) {
 			return 1;

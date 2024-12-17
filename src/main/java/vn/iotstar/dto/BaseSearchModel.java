@@ -9,4 +9,6 @@ public abstract class BaseSearchModel {
 
 	protected int page;
 
+	protected int size;
+
 }

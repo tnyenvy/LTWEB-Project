@@ -42,31 +42,26 @@ public class ProductService extends BaseService<Product> {
 	}
 
 	public PagerData<Product> search(ProductSearchModel searchModel) {
-
-
 		String sql = "SELECT * FROM tbl_products p WHERE 1=1";
 
 		if (searchModel != null) {
-
 			if (searchModel.categoryId != null) {
 				sql += " and category_id = " + searchModel.categoryId;
 			}
-
 
 			if (!StringUtils.isEmpty(searchModel.seo)) {
 				sql += " and p.seo = '" + searchModel.seo + "'";
 			}
 
 			if (!StringUtils.isEmpty(searchModel.keyword)) {
-				sql += " and (p.title like '%" + searchModel.keyword + "%'" + " or p.detail_description like '%"
-						+ searchModel.keyword + "%'" + " or p.short_description like '%" + searchModel.keyword + "%')";
+				sql += " and (p.title like '%" + searchModel.keyword + "%'"
+						+ " or p.detail_description like '%" + searchModel.keyword + "%'"
+						+ " or p.short_description like '%" + searchModel.keyword + "%')";
 			}
 		}
 
-		// chi lay san pham chua xoa
-//				sql += " and p.status=1 ";
+		// Chỉ cần gọi method này mà không cần thay đổi SIZE_OF_PAGE
 		return executeByNativeSQL(sql, searchModel == null ? 0 : searchModel.getPage());
-
 	}
 
 	/**
