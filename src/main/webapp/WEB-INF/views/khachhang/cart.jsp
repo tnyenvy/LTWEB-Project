@@ -69,7 +69,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${cart.cartItems }" var="ci">
+                <c:forEach items="${cartItems}" var="ci">
                     <tr>
                         <th scope="row" class="border-0">
                             <div class="p-2">
@@ -112,9 +112,42 @@
                         </td>
                     </tr>
                 </c:forEach>
-
                 </tbody>
             </table>
+            <!-- Pagination Navigation -->
+            <div class="pagination">
+                <c:if test="${totalPages > 1}">
+                    <ul style="list-style: none; display: flex; justify-content: center; padding: 0;">
+                        <!-- Previous Page -->
+                        <c:if test="${currentPage > 1}">
+                            <li style="margin-right: 5px;">
+                                <a href="?page=${currentPage - 1}&size=5" style="text-decoration: none; padding: 5px 10px; border: 1px solid #ccc;">
+                                    &laquo; Previous
+                                </a>
+                            </li>
+                        </c:if>
+
+                        <!-- Page Numbers -->
+                        <c:forEach var="i" begin="1" end="${totalPages}">
+                            <li style="margin-right: 5px;">
+                                <a href="?page=${i}&size=5" style="text-decoration: none; padding: 5px 10px; border: 1px solid #ccc;
+                                   ${i == currentPage ? 'font-weight: bold; background-color: #007bff; color: white;' : ''}">
+                                    ${i}
+                                </a>
+                            </li>
+                        </c:forEach>
+
+                        <!-- Next Page -->
+                        <c:if test="${currentPage < totalPages}">
+                            <li>
+                                <a href="?page=${currentPage + 1}&size=5" style="text-decoration: none; padding: 5px 10px; border: 1px solid #ccc;">
+                                    Next &raquo;
+                                </a>
+                            </li>
+                        </c:if>
+                    </ul>
+                </c:if>
+            </div>
         </div>
 
 
