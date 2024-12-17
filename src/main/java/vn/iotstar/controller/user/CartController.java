@@ -28,7 +28,7 @@ import java.util.Map;
 public class CartController extends BaseController {
 
 	private final ProductService productService;
-	
+
 	private final SaleorderService saleOrderService;
 
 	public CartController(ProductService productService, SaleorderService saleOrderService) {
@@ -46,7 +46,7 @@ public class CartController extends BaseController {
 		String customerPhone = request.getParameter("customer_phone");
 
 		Saleorder saleOrder = new Saleorder();
-		
+
 		if(super.isLogined()) {
 			User userLogined = super.getUserLogined();
 			saleOrder.setUser(userLogined);
@@ -57,8 +57,8 @@ public class CartController extends BaseController {
 			saleOrder.setCustomer_name(customerFullName);
 			saleOrder.setCustomer_email(customerEmail);
 			saleOrder.setCustomer_address(customerAddress);
-			saleOrder.setCustomer_phone(customerPhone);	
-		}		
+			saleOrder.setCustomer_phone(customerPhone);
+		}
 
 		saleOrder.setCode(String.valueOf(System.currentTimeMillis()));
 
@@ -81,20 +81,45 @@ public class CartController extends BaseController {
 
 		return "redirect:/home";
 	}
-	
+
 	@RequestMapping(value = { "/cart/view" }, method = RequestMethod.GET)
-	public String cartView(final Model model, final HttpServletRequest request, final HttpServletResponse response)
-			throws IOException {
-		return "khachhang/cart";
+	public String cartView(final Model model, final HttpServletRequest request,
+						   @RequestParam(defaultValue = "1") int page,
+						   @RequestParam(defaultValue = "5") int size) {
+		HttpSession session = request.getSession();
+		Cart cart = (Cart) session.getAttribute("cart");
+
+		if (cart != null) {
+			List<CartItem> cartItems = cart.getCartItems();
+
+			// Pagination logic
+			int start = (page - 1) * size;
+			int end = Math.min(start + size, cartItems.size());
+
+			List<CartItem> paginatedItems = cartItems.subList(start, end);
+
+			model.addAttribute("cartItems", paginatedItems);
+			model.addAttribute("currentPage", page);
+			model.addAttribute("totalPages", (int) Math.ceil((double) cartItems.size() / size));
+			model.addAttribute("totalItems", cartItems.size());
+		} else {
+			model.addAttribute("cartItems", List.of());
+			model.addAttribute("currentPage", 1);
+			model.addAttribute("totalPages", 1);
+			model.addAttribute("totalItems", 0);
+		}
+
+		return "khachhang/cart"; // Redirect to cart.jsp
 	}
-	
+
+
 	@GetMapping("cart/remove/{productId}")
 	public String removeProduct(final HttpServletRequest request, @PathVariable("productId") int productId) {
 		HttpSession session = request.getSession();
 		Cart cart = (Cart) session.getAttribute("cart");
 		List<CartItem> cartItem = cart.getCartItems();
 		Product product = productService.getById(productId);
-		
+
 		var index = 0;
 		for (int i = 0; i < cartItem.size();i++) {
 			if(cartItem.get(i).getProductId() == productId) {
@@ -106,10 +131,10 @@ public class CartController extends BaseController {
 		this.calculateTotalPrice(request);
 		return "redirect:/cart/view";
 	}
-	
+
 	@RequestMapping(value = { "/ajax/updateQuanlityCart" }, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> ajax_UpdateQuanlityCart(final Model model, final HttpServletRequest request,
-			final HttpServletResponse response, final @RequestBody CartItem cartItem) {
+																	   final HttpServletResponse response, final @RequestBody CartItem cartItem) {
 
 		HttpSession session = request.getSession();
 
@@ -132,7 +157,7 @@ public class CartController extends BaseController {
 		}
 
 		this.calculateTotalPrice(request);
-		
+
 		Map<String, Object> jsonResult = new HashMap<String, Object>();
 		jsonResult.put("code", 200);
 		jsonResult.put("status", "TC");
@@ -142,10 +167,10 @@ public class CartController extends BaseController {
 		session.setAttribute("totalItems", getTotalItems(request));
 		return ResponseEntity.ok(jsonResult);
 	}
-	
+
 	@RequestMapping(value = { "/ajax/truQuanlityCart" }, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> ajax_TruQuanlityCart(final Model model, final HttpServletRequest request,
-			final HttpServletResponse response, final @RequestBody CartItem cartItem) {
+																	final HttpServletResponse response, final @RequestBody CartItem cartItem) {
 
 		HttpSession session = request.getSession();
 
@@ -166,9 +191,9 @@ public class CartController extends BaseController {
 				item.setQuanlity(ciProductQuality);
 			}
 		}
-		
+
 		this.calculateTotalPrice(request);
-		
+
 		Map<String, Object> jsonResult = new HashMap<String, Object>();
 		jsonResult.put("code", 200);
 		jsonResult.put("status", "TC");
@@ -178,11 +203,11 @@ public class CartController extends BaseController {
 		session.setAttribute("totalItems", getTotalItems(request));
 		return ResponseEntity.ok(jsonResult);
 	}
-	
-		
+
+
 	@RequestMapping(value = { "/ajax/addToCart" }, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> ajax_AddToCart(final Model model, final HttpServletRequest request,
-			final HttpServletResponse response, final @RequestBody CartItem cartItem) {
+															  final HttpServletResponse response, final @RequestBody CartItem cartItem) {
 
 		HttpSession session = request.getSession();
 
@@ -214,7 +239,7 @@ public class CartController extends BaseController {
 		}
 
 		this.calculateTotalPrice(request);
-		
+
 		Map<String, Object> jsonResult = new HashMap<String, Object>();
 		jsonResult.put("code", 200);
 		jsonResult.put("status", "TC");
@@ -223,7 +248,7 @@ public class CartController extends BaseController {
 		session.setAttribute("totalItems", getTotalItems(request));
 		return ResponseEntity.ok(jsonResult);
 	}
-	
+
 	private int getTotalItems(final HttpServletRequest request) {
 		HttpSession httpSession = request.getSession();
 
@@ -256,7 +281,7 @@ public class CartController extends BaseController {
 
 		List<CartItem> cartItems = cart.getCartItems();
 		BigDecimal total = BigDecimal.ZERO;
-		
+
 		for(CartItem ci : cartItems) {
 			total = total.add(ci.getPriceUnit().multiply(BigDecimal.valueOf(ci.getQuanlity())));
 		}
