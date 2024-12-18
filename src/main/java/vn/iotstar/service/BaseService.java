@@ -17,7 +17,7 @@ import java.util.List;
 
 public abstract class BaseService<E extends BaseEntity>{
 
-	private static int SIZE_OF_PAGE = 4;
+	private static int SIZE_OF_PAGE = 8;
 
 	@Autowired
 	protected CheckEmailRepository checkEmailRepository;

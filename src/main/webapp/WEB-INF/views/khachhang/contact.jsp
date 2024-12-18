@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="name"> Name</label>
+                    <label for="name">Tên khách hàng</label>
                     <input path="name" type="text" id="name" name="name"
                            pattern="^[a-zA-Z\\s]+"
                            title="Name gồm chữ cái">
@@ -46,12 +46,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="massage">Massage</label>
+                    <label for="massage">Tin nhắn</label>
                     <textarea path="massage" name="massage" id="massage" cols="30"
                               rows="10" pattern="^[a-zA-Z\\s]+"></textarea>
                 </div>
                 <div class="form-group">
-                    <button type="button" onclick="contact('${base}');" class="sub">Submit</button>
+                    <button type="button" onclick="contact('${base}');" class="sub">Gửi</button>
                 </div>
 
             </div>

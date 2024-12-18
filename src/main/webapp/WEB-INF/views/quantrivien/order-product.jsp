@@ -141,8 +141,8 @@
     $(document).ready(function () {
 
         $("#paging").pagination({
-            currentPage: ${orderWithPaging.currentPage},
-            items: ${orderWithPaging.totalItems},
+            currentPage: ${orderProductWithPaging.currentPage},
+            items: ${orderProductWithPaging.totalItems},
             itemsOnPage: 5,
             cssStyle: 'dark-theme',
             onPageClick: function (pageNumber, event) {

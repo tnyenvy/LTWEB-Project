@@ -139,20 +139,19 @@
 	<jsp:include page="/WEB-INF/views/quantrivien/layouts/js.jsp"></jsp:include>
 </body>
 <script type="text/javascript">
+    $( document ).ready(function() {
 
-			$( document ).ready(function() {
-				
-				$("#paging").pagination({
-					currentPage: ${orderWithPaging.currentPage},
-			        items: ${orderWithPaging.totalItems},
-			        itemsOnPage: 5,
-			        cssStyle: 'dark-theme',
-			        onPageClick: function(pageNumber, event) {
-			        	$('#page').val(pageNumber);
-			        	$('#btnSearch').trigger('click');
-					},
-			    });
-			});
+        $("#paging").pagination({
+            currentPage: ${orderWithPaging.currentPage},
+            items: ${orderWithPaging.totalItems},
+            itemsOnPage: 5,
+            cssStyle: 'dark-theme',
+            onPageClick: function(pageNumber, event) {
+                $('#page').val(pageNumber);
+                $('#btnSearch').trigger('click');
+            },
+        });
+    });
 </script>
 <script type="text/javascript">
     function updateOrderStatus(orderId, status) {

@@ -102,7 +102,6 @@
 						<div id="paging"></div>
 					</div>
 				</div>
-				
 			</form>
 		</div>
 
@@ -128,9 +127,9 @@
 			$( document ).ready(function() {
 				
 				$("#paging").pagination({
-					currentPage: ${subcribeWithPaging.currentPage},
-			        items: ${subcribeWithPaging.totalItems},
-			        itemsOnPage: 20,
+					currentPage: ${subscribeWithPaging.currentPage},
+			        items: ${subscribeWithPaging.totalItems},
+			        itemsOnPage: 5,
 			        cssStyle: 'dark-theme',
 			        onPageClick: function(pageNumber, event) {
 			        	$('#page').val(pageNumber);

@@ -105,14 +105,14 @@
                 <div class="item">
 
                     <div class="item-images">
-                        <a href="#"> <img src="${base }/img/grande.png" width="100%">
+                        <a href="#"> <img src="${base }/img/nuoc-cam-teppy.jpg" width="100%">
                         </a>
                     </div>
                     <div class="item-content">
-                        <a href="#"> HOODIE CANVA - BLACK </a>
+                        <a href="#"> Nước Cam Teppy </a>
                         <div class="price">
-                            <h4 class="new-price">315,000đ</h4>
-                            <h5 class="old-price">420,000đ</h5>
+                            <h4 class="new-price">22,000đ</h4>
+                            <h5 class="old-price">25,000đ</h5>
                         </div>
                     </div>
                 </div>
@@ -120,15 +120,15 @@
                 <div class="item">
 
                     <div class="item-images">
-                        <a href="#"> <img src="${base }/img/canva_white.png"
+                        <a href="#"> <img src="${base }/img/nuoc-cam-ep-splash.jpg"
                                           width="100%">
                         </a>
                     </div>
                     <div class="item-content">
-                        <a href="#"> HOODIE CANVA - XÁM TRẮNG </a>
+                        <a href="#"> Nước Cam Ép Splash </a>
                         <div class="price">
-                            <h4 class="new-price">315,000đ</h4>
-                            <h5 class="old-price">420,000đ</h5>
+                            <h4 class="new-price">12,000đ</h4>
+                            <h5 class="old-price">15,000đ</h5>
                         </div>
                     </div>
                 </div>
@@ -136,15 +136,15 @@
                 <div class="item">
 
                     <div class="item-images">
-                        <a href="#"> <img src="${base }/img/thun-đen.png"
+                        <a href="#"> <img src="${base }/img/nuoc-lavie.jpg"
                                           width="100%">
                         </a>
                     </div>
                     <div class="item-content">
-                        <a href="#"> ÁO THUN TYPE - ĐEN </a>
+                        <a href="#"> Nước Suối Lavie </a>
                         <div class="price">
-                            <h4 class="new-price">208,000đ</h4>
-                            <h5 class="old-price">320,000đ</h5>
+                            <h4 class="new-price">10,000đ</h4>
+                            <h5 class="old-price">12,000đ</h5>
                         </div>
                     </div>
                 </div>
@@ -152,15 +152,15 @@
                 <div class="item">
 
                     <div class="item-images">
-                        <a href="#"> <img src="${base }/img/type_xanh.png"
+                        <a href="#"> <img src="${base }/img/nuoc-ngot-sprite-huong-chanh.jpg"
                                           width="100%">
                         </a>
                     </div>
                     <div class="item-content">
-                        <a href="#"> ÁO THUN TYPE - XANH </a>
+                        <a href="#"> Nước Ngọt Sprite Hương Chanh </a>
                         <div class="price">
-                            <h4 class="new-price">208,000đ</h4>
-                            <h5 class="old-price">320,000đ</h5>
+                            <h4 class="new-price">11,000đ</h4>
+                            <h5 class="old-price">14,000đ</h5>
                         </div>
                     </div>
                 </div>
@@ -169,14 +169,14 @@
 
                     <div class="item-images">
                         <a href="#"> <img
-                                src="${base }/img/thun-stiches-hinhtheu.png" width="100%">
+                                src="${base }/img/nuoc-tinh-khiet-aquafina.jpg" width="100%">
                         </a>
                     </div>
                     <div class="item-content">
-                        <a href="#"> ÁO THUN STICHES - (HÌNH THÊU) </a>
+                        <a href="#"> Nước Tinh Khiết Aquafina </a>
                         <div class="price">
-                            <h4 class="new-price">195,000đ</h4>
-                            <h5 class="old-price">300,000đ</h5>
+                            <h4 class="new-price">5,000đ</h4>
+                            <h5 class="old-price">8,000đ</h5>
                         </div>
                     </div>
                 </div>
@@ -190,8 +190,7 @@
     <jsp:include page="/WEB-INF/views/khachhang/layouts/footer.jsp"></jsp:include>
     <!--close footer-->
     <div class="copyright">
-        Copyright <i class="far fa-copyright"></i> <a href="#">msic.</a> <a
-            href="#">Powered by Haravan</a>
+        <i class="far fa-copyright"></i> <a href="#">LapTrinhWeb-2024</a>
     </div>
 </main>
 </body>
